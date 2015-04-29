@@ -96,6 +96,7 @@ module Sprig
       end
 
       def available_environment_files
+        return [] unless File.directory?(seed_environment_directory)
         Dir.entries(seed_environment_directory)
       end
 
